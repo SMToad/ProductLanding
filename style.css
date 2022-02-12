@@ -254,14 +254,14 @@ hr {
   .slideshow-container {
     max-width: 100%;
   }
-  .mySlides {
+  .slides {
     flex-direction: column;
     align-items: center;
   }
-  .mySlides img {
+  .slides img {
     max-width: 100%;
   }
-  .text {
+  .slide-text {
     margin: 10px 0;
   }
   .next, .prev {
