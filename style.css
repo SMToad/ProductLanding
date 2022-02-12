@@ -1,0 +1,276 @@
+* { 
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  background-color: hsl(26, 85%, 95%, 1);
+  line-height: 30px;
+}
+.main-title:before { 
+  content: ''; 
+  display: block; 
+  position: relative; 
+  width: 0; 
+  height: 7em; 
+  margin-top: -6em 
+} 
+#header {
+  top: 0;
+  display: flex;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0 5px 5px hsl(26,20%,50%,1);
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: hsl(26,50%,99%,1);
+}
+#header a {
+  color: hsl(26,20%,25%,1);
+  font-weight: bold;
+}
+#title {
+  font-style: italic;
+}
+#header-img {
+  width: 7em;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+}
+.content {
+  margin-top: 100px;
+  max-width: 70%;
+}
+.section {
+  margin-bottom: 100px;
+}
+.main-title {
+  margin-bottom: 15px;
+}
+.wrapper {
+  width: 80%; 
+  max-width: 600px; 
+  height: 100%; 
+  margin: 50px auto 0px auto; 
+}
+.h_iframe {
+  position: relative; 
+  padding-top: 56%;
+}
+.h_iframe iframe {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+#list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  margin: 50px 0;
+}
+.list-img {
+  width: 25%;
+  grid-row: 1;
+  justify-content: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  background-color: hsl(26, 65%, 90%, 0.9);
+  box-shadow: 0 0 4px 1px hsl(26, 20%, 50%, 0.9);
+}
+.slides {
+  display: none;
+}
+/* Hide the images by default */
+
+.slides img {
+  max-width: 70%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: hsl(26,20%,50%,0.8);
+}
+
+/* Caption text */
+.slide-text {
+  color: hsl(26,20%,25%,1);
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: hsl(26,20%,70%,1);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: hsl(26,20%,50%,1);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  resize: none;
+  font-family: 'Raleway', sans-serif;
+}
+#order, #email {
+  background-color: hsl(26, 65%, 90%, 0.9);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 3px 1px hsl(26, 20%, 50%, 0.9);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#order:hover, #email:hover, #submit:hover {
+  box-shadow: 0 0 3px 2px hsl(26, 20%, 50%, 0.9);
+}
+
+#submit {
+  width: 15%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: hsl(26, 60%, 70%, 0.9);
+  border-radius: 15px;
+  border: solid 1px hsl(26, 20%, 50%, 0.9);
+  box-shadow: 0 0 2px 0.4px hsl(26, 20%, 50%, 0.9);
+  margin: 10px auto;
+}
+#submit:hover {
+  box-shadow: 0 0 2px 1px hsl(26, 20%, 50%, 0.9);
+  background-color: hsl(26, 60%, 65%, 0.9);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(26,20%,95%,1);
+  background-color: hsl(26,30%,25%,1);
+  padding: 30px 20px 20px 20px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 0 3px  hsl(26,20%,15%,1)
+}
+
+footer a {
+  color: hsl(26,20%,95%,1);
+}
+footer p {
+  margin-left: auto;
+  padding-top: 20px;
+}
+hr {
+  width: 99%;
+  border: 1px hsl(26,30%,20%,1) solid;
+  box-shadow: 0 0 6px hsl(26,25%,15%,1);
+  margin: 20px 0;
+}
+@media (max-width: 700px) {
+  #header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+  }
+  #title, #header-img {
+    grid-row: 1;
+  }
+  #title {
+    font-size: 27px;
+  }
+  #header-img {
+    width: 75%;
+  }
+  #nav-bar {
+    grid-row: 2;
+    grid-column: 1 / 4;
+  }
+  .nav-link {
+    font-size: 15px;
+  }
+  .content {
+    max-width: 90%;
+  }
+  .main-text {
+    font-size: 17px;
+  }
+  .wrapper {
+    width: 95%;
+    margin-top: 15px;
+  }
+  #list-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #list-container p {
+    margin-bottom: 25px;
+  }
+  .slideshow-container {
+    max-width: 100%;
+  }
+  .mySlides {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mySlides img {
+    max-width: 100%;
+  }
+  .text {
+    margin: 10px 0;
+  }
+  .next, .prev {
+    padding: 10px;
+  }
+  #submit {
+    width: 35%;
+  }
+  #copyright {
+    font-size: 17px;
+  }
+}
