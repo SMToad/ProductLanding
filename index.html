@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <title>Sweet Cakes Bakery</title>
   <meta charset="UTF-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,94 +12,105 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-  <header id="header">
-    <img id="header-img" src="https://s.tmimgcdn.com/scr/1200x750/182900/cake-bakery-logo-design-template_182928-original.png" alt="Bakery logo"></img>
-  <h1 id="title">Sweet Cakes Bakery</h1>
-    <nav id="nav-bar">
-      <a href="#about" class="nav-link">About us</a> 
-      <a href="#menu" class="nav-link">Menu</a> 
-      <a href="#order-info" class="nav-link">Order</a> 
+  <header class="header">
+    <img class="header__img"
+      src="https://s.tmimgcdn.com/scr/1200x750/182900/cake-bakery-logo-design-template_182928-original.png"
+      alt="Bakery logo"></img>
+    <h1 class="header__title">Sweet Cakes Bakery</h1>
+    <nav class="header__navbar">
+      <a href="#about" class="header__navlink">About us</a>
+      <a href="#menu" class="header__navlink">Menu</a>
+      <a href="#order-info" class="header__navlink">Order</a>
     </nav>
   </header>
   <div class="content">
-    <div class="section">
-      <h2 class="main-title" id="about">Who are we?</h2>
-      <p class="main-text">We are a humble bakery that was founded by a brave woman, who survived being married to an idiot. All our pastries are made with love and care, that she didn't receive as a child.</p>
-      <div class="wrapper">
-        <div class="h_iframe">
-          <iframe id="video" src="https://www.youtube.com/embed/RR15fymZA4M">
+    <section class="section">
+      <h2 class="section__title" id="about">Who are we?</h2>
+      <p class="section__text">We are a humble bakery that was founded by a brave woman, who survived being married to an
+        idiot. All our pastries are made with love and care, that she didn't receive as a child.</p>
+      <div class="videobox">
+        <div class="videobox__body">
+          <iframe class="videobox__content" src="https://www.youtube.com/embed/RR15fymZA4M">
           </iframe>
         </div>
       </div>
-    </div>
-    <div class="section">
-      <h2 class="main-title">Why should you pick us?</h2>
-   
-      <div id="list-container">
-        <img class="list-img" src="https://www.freeiconspng.com/uploads/certificate-icon-10.png">
-        <p class="main-text">Certified professional bakers</p>
-        <img class="list-img" src="https://i.pinimg.com/originals/97/c0/73/97c073fef6ab4a65272dc853d1a4ff2f.png">
-        <p class="main-text">Fresh and natural ingredients</p>
-        <img class="list-img" src="https://www.makrshakr.com/wp-content/uploads/2021/02/vegan-symbol-png.png">
-        <p class="main-text">Halal and vegan friendly options</p>
-      </div>
-    </div>
-    <div class="section">
-    <h2 class="main-title" id="menu">What do we make?</h2>
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
+    </section>
+    <section class="section">
+      <h2 class="section__title">Why should you pick us?</h2>
 
-  <!-- Full-width images with number and caption text -->
-    <div class="slides">
-      <img src="https://www.snackandbakery.com/ext/resources/NewProducts/2019-09/GourmetCakes.jpg?height=635&t=1567536069&width=1200">
-      <div class="slide-text">Cakes</div>
-    </div>
-    <div class="slides">
-      <img src="https://offloadmedia.feverup.com/secretchicago.com/wp-content/uploads/2020/08/19113709/Screen-Shot-2020-08-26-at-10.21.38-AM-1024x552.png">
-      <div class="slide-text">Donuts</div>
-    </div>
-    <div class="slides">
-      <img src="https://assets-eu-01.kc-usercontent.com/559bb7d3-88a4-01c1-79a3-dd4d5b2d2bb0/30b7b826-cf4e-4e8f-ac8e-048ee0971cef/Cake%20Pops_4x2-7.jpg?w=3840&q=85&auto=format&lossless=1">
-      <div class="slide-text">Cake Pops</div>
-    </div>
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-<br>
-
-<!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"> </span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-    </div>
-    <div class="section">
-    <h2 class="main-title" id="order-info">Sounds interesting?</h2>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-       <label for="order" class="main-text">Send us the description of what you would like us to make for you, and we will contact you regarding all the details</label>
-      <textarea id="order" name="order" placeholder="Start describing your order here..."></textarea>
-      <label for="email" class="main-text">Enter your email here, so that we can contact you</label>
-      <input id="email" name="email" type="email" placeholder="ilovecakes@example.com">
-      <div id="check-area">
-        <input type="checkbox" id="check" name="check" value="Agree">
-        <label for="check">I want to receive delicious offers and discounts via email</label>
+      <div class="features">
+        <img class="features__img" src="https://www.freeiconspng.com/uploads/certificate-icon-10.png">
+        <p class="features__text">Certified professional bakers</p>
+        <img class="features__img" src="https://i.pinimg.com/originals/97/c0/73/97c073fef6ab4a65272dc853d1a4ff2f.png">
+        <p class="features__text">Fresh and natural ingredients</p>
+        <img class="features__img" src="https://www.makrshakr.com/wp-content/uploads/2021/02/vegan-symbol-png.png">
+        <p class="features__text">Halal and vegan friendly options</p>
       </div>
-      <input id="submit" type="submit" value="Submit"> 
-    </form>
-    
+    </section>
+    <section class="section">
+      <h2 class="section__title" id="menu">What do we make?</h2>
+      <div class="slideshow">
+        <div class="slideshow__slide">
+          <img class="slideshow__img"
+            src="https://www.snackandbakery.com/ext/resources/NewProducts/2019-09/GourmetCakes.jpg?height=635&t=1567536069&width=1200">
+          <div class="slideshow__text">Cakes</div>
+        </div>
+        <div class="slideshow__slide">
+          <img class="slideshow__img"
+            src="https://offloadmedia.feverup.com/secretchicago.com/wp-content/uploads/2020/08/19113709/Screen-Shot-2020-08-26-at-10.21.38-AM-1024x552.png">
+          <div class="slideshow__text">Donuts</div>
+        </div>
+        <div class="slideshow__slide">
+          <img class="slideshow__img"
+            src="https://assets-eu-01.kc-usercontent.com/559bb7d3-88a4-01c1-79a3-dd4d5b2d2bb0/30b7b826-cf4e-4e8f-ac8e-048ee0971cef/Cake%20Pops_4x2-7.jpg?w=3840&q=85&auto=format&lossless=1">
+          <div class="slideshow__text">Cake Pops</div>
+        </div>
+        <a class="slideshow__prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="slideshow__next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div class="slideshow__dots">
+        <span class="slideshow__dot" onclick="currentSlide(1)"> </span>
+        <span class="slideshow__dot" onclick="currentSlide(2)"></span>
+        <span class="slideshow__dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__title" id="order-info">Sounds interesting?</h2>
+      <form class="form" action="https://www.freecodecamp.com/email-submit">
+        <label for="form__description" class="form__text">
+          Send us the description of what you would like us to make for you, and we
+          will contact you regarding all the details
+        </label>
+        <textarea class="form__description" name="form__description" placeholder="Start describing your order here..."></textarea>
+        <label for="form__email" class="form__text">
+          Enter your email here, so that we can contact you
+        </label>
+        <input class="form__email" name="form__email" type="email" placeholder="ilovecakes@example.com">
+        <div class="form__checkbox">
+          <input type="checkbox" class="form__check" name="form__check" value="Agree">
+          <label for="form__check">
+            I want to receive delicious offers and discounts via email
+          </label>
+        </div>
+        <input class="form__submit" type="submit" value="Submit">
+      </form>
+    </section>
   </div>
-</div>
-  <footer>
-      <nav id="footer-nav-bar">
-        <a href="" class="nav-link">Pricing</a> 
-        <a href="" class="nav-link">Delivery</a> 
-        <a href="" class="nav-link">Contacts</a> 
-      </nav>
-    <hr>
-      <p id="copyright">Copyright 2022, Sweet Cakes Bakery</p>
-    </footer>
+  <footer class="footer">
+    <nav class="footer__navbar">
+      <a href="" class="footer__navlink">Pricing</a>
+      <a href="" class="footer__navlink">Delivery</a>
+      <a href="" class="footer__navlink">Contacts</a>
+    </nav>
+    <hr class="footer__divider">
+    <p class="footer__copyright">Copyright 2022, Sweet Cakes Bakery</p>
+  </footer>
 </body>
+<script src="./script.js"></script>
+
 </html>

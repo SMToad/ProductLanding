@@ -11,15 +11,7 @@ body {
   background-color: hsl(26, 85%, 95%, 1);
   line-height: 30px;
 }
-.main-title:before { 
-  content: ''; 
-  display: block; 
-  position: relative; 
-  width: 0; 
-  height: 7em; 
-  margin-top: -6em 
-} 
-#header {
+.header {
   top: 0;
   display: flex;
   z-index: 10;
@@ -30,17 +22,18 @@ body {
   position: fixed;
   background-color: hsl(26,50%,99%,1);
 }
-#header a {
+.header__img {
+  width: 100px;
+}
+.header__title {
+  font-style: italic;
+  font-size: 40px;
+}
+.header__navlink {
   color: hsl(26,20%,25%,1);
   font-weight: bold;
 }
-#title {
-  font-style: italic;
-}
-#header-img {
-  width: 7em;
-}
-.nav-link {
+.header__navlink, .footer__navlink {
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
@@ -52,57 +45,67 @@ body {
 .section {
   margin-bottom: 100px;
 }
-.main-title {
+.section__title:before { 
+  content: ''; 
+  display: block; 
+  position: relative; 
+  width: 0; 
+  height: 5em; 
+  margin-top: -5em 
+} 
+.section__title {
   margin-bottom: 15px;
 }
-.wrapper {
+.videobox {
   width: 80%; 
   max-width: 600px; 
   height: 100%; 
   margin: 50px auto 0px auto; 
 }
-.h_iframe {
+.videobox__body {
   position: relative; 
   padding-top: 56%;
 }
-.h_iframe iframe {
+.videobox__content {
   position: absolute; 
   top: 0; 
   left: 0; 
   width: 100%; 
   height: 100%;
 }
-#list-container {
+.features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
   margin: 50px 0;
 }
-.list-img {
+.features__img {
   width: 25%;
   grid-row: 1;
   justify-content: center;
 }
-/* Slideshow container */
-.slideshow-container {
+.slideshow {
   max-width: 90%;
   position: relative;
   margin: auto;
   background-color: hsl(26, 65%, 90%, 0.9);
   box-shadow: 0 0 4px 1px hsl(26, 20%, 50%, 0.9);
 }
-.slides {
+.slideshow__slide {
   display: none;
 }
-/* Hide the images by default */
-
-.slides img {
-  max-width: 70%;
+.slideshow__text {
+  color: hsl(26,20%,25%,1);
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+.slideshow__img {
+  max-width: 70%;
+}
+.slideshow__prev, .slideshow__next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -117,27 +120,18 @@ body {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
+.slideshow__next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.slideshow__prev:hover, .slideshow__next:hover {
   background-color: hsl(26,20%,50%,0.8);
 }
 
-/* Caption text */
-.slide-text {
-  color: hsl(26,20%,25%,1);
-  font-size: 20px;
-  font-weight: bold;
-  margin: auto;
+.slideshow__dots {
+  text-align: center;
 }
-
-/* The dots/bullets/indicators */
-.dot {
+.slideshow__dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -148,18 +142,14 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.slideshow__dot_active, .slideshow__dot:hover {
   background-color: hsl(26,20%,50%,1);
 }
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
-textarea {
-  resize: none;
-  font-family: 'Raleway', sans-serif;
-}
-#order, #email {
+.form__description, .form__email {
   background-color: hsl(26, 65%, 90%, 0.9);
   border-radius: 5px;
   border: none;
@@ -168,11 +158,11 @@ textarea {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-#order:hover, #email:hover, #submit:hover {
-  box-shadow: 0 0 3px 2px hsl(26, 20%, 50%, 0.9);
+.form__description {
+  resize: none;
+  font-family: 'Raleway', sans-serif;
 }
-
-#submit {
+.form__submit {
   width: 15%;
   padding: 10px 0;
   text-align: center;
@@ -182,11 +172,16 @@ textarea {
   box-shadow: 0 0 2px 0.4px hsl(26, 20%, 50%, 0.9);
   margin: 10px auto;
 }
-#submit:hover {
+.form__description:hover, 
+.form__email:hover, 
+.form__submit:hover {
+  box-shadow: 0 0 3px 2px hsl(26, 20%, 50%, 0.9);
+}
+.form__submit:hover {
   box-shadow: 0 0 2px 1px hsl(26, 20%, 50%, 0.9);
   background-color: hsl(26, 60%, 65%, 0.9);
 }
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,80 +192,80 @@ footer {
   margin-top: 20px;
   box-shadow: 0 0 3px  hsl(26,20%,15%,1)
 }
-
-footer a {
+.footer__navlink {
   color: hsl(26,20%,95%,1);
 }
-footer p {
-  margin-left: auto;
-  padding-top: 20px;
-}
-hr {
+.footer__divider {
   width: 99%;
   border: 1px hsl(26,30%,20%,1) solid;
   box-shadow: 0 0 6px hsl(26,25%,15%,1);
   margin: 20px 0;
 }
+.footer__copyright {
+  margin-left: auto;
+  padding-top: 20px;
+}
+
 @media (max-width: 700px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
     justify-items: center;
   }
-  #title, #header-img {
+  .header__title, .header__img {
     grid-row: 1;
   }
-  #title {
-    font-size: 27px;
+  .header__title {
+    font-size: 25px;
   }
-  #header-img {
-    width: 75%;
+  .header__img {
+    width: 25%;
   }
-  #nav-bar {
+  .header__navbar {
     grid-row: 2;
     grid-column: 1 / 4;
   }
-  .nav-link {
+  .header__navlink, .footer__navlink {
     font-size: 15px;
   }
   .content {
     max-width: 90%;
   }
-  .main-text {
+  .section__text {
     font-size: 17px;
   }
-  .wrapper {
+  .videobox {
     width: 95%;
     margin-top: 15px;
   }
-  #list-container {
+  .features {
     display: flex;
     flex-direction: column;
   }
-  #list-container p {
+  .features__text {
     margin-bottom: 25px;
   }
-  .slideshow-container {
+  .slideshow {
     max-width: 100%;
   }
-  .slides {
+  .slideshow__slide {
     flex-direction: column;
     align-items: center;
   }
-  .slides img {
+  .slideshow__img {
     max-width: 100%;
   }
-  .slide-text {
+  .slideshow-text {
     margin: 10px 0;
   }
-  .next, .prev {
+  .slideshow__next, .slideshow__prev {
     padding: 10px;
   }
-  #submit {
+  .form__submit {
     width: 35%;
   }
-  #copyright {
+  .form__copyright {
     font-size: 17px;
   }
 }
